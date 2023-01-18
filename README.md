@@ -14,3 +14,14 @@ python manage.py startapp catalog
 - Registered catalog app in `.\locallibrary\locallibrary\settings.py` under `INSTALLED_APPS`
 - No changes to `DATABASES` settings necessary for now, will use SQLite
 - Updated timezone to Europe/Berlin
+
+## Views
+- Registered catalog app in `.\locallibrary\locallibrary\urls.py`:
+```
+urlpatterns += [
+    path('catalog/', include('catalog.urls')),
+]
+```
+- Adding a redirect from `127.0.0.1:8000` to `127.0.0.1:8000/catalog/`
+- Updated URL mapping to serve static files
+- Added basic (blank) version of `.\locallibrary\catalog\urls.py`
