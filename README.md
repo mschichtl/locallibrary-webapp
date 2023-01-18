@@ -1,7 +1,7 @@
 # locallibrary-webapp
 
 ## Source
-Following this tutorial [https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website].
+Following this tutorial https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website.
 
 ## Steps to create blank app
 Using Anaconda prompt and an environment with Python3 and Django pre-installed:
@@ -25,3 +25,16 @@ urlpatterns += [
 - Adding a redirect from `127.0.0.1:8000` to `127.0.0.1:8000/catalog/`
 - Updated URL mapping to serve static files
 - Added basic (blank) version of `.\locallibrary\catalog\urls.py`
+
+## First deployment
+- Running database migrations. Initially to create some tables for admin app:
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+## Run Server
+```
+python manage.py runserver
+```
+**Note**: First run at this stage returns this error message: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website/django_404_debug_page.png
